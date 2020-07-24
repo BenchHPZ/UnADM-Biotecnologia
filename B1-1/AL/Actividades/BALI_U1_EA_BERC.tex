@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{soul}
+
+\usepackage{graphicx}
+	\graphicspath{ {assets/} }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %%
+%%        Datos Trabajo     %%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[0]{Evidencia de aprendizaje: Vectores}
+\newcommand{\materia}[0]{\'Algebra Lineal}
+\newcommand{\grupo}[0]{BI-BALI-2002-B1-012}
+\newcommand{\unidad}[0]{Unidad 1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftex,
+            pdfauthor={bench},
+            pdftitle={\titulo},
+            pdfsubject={\materia},
+            pdfkeywords={\grupo, \unidad, UnADM},
+            pdfproducer={Latex with hyperref, or other system},
+            pdfcreator={pdflatex, or other tool}]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+	\includegraphics{../../../assets/logo-unadm} \\
+	\ \\ Benjam\'in Rivera \\
+	\bf{\titulo}\\\ \\}
+
+\author{
+	Universidad Abierta y a Distancia de México \\
+	TSU en Biotecnolog\'ia \\
+	\textit{Materia:} \materia \\
+	\textit{Grupo:} \grupo \\
+	\textit{Unidad:} \unidad \\
+	\\
+	\textit{Matricula:} ES202105994 }
+
+\date{\textit{Fecha de entrega:} \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Documento         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle\newpage
+
+\par En una empresa de plásticos fabrica un tarro de 500 ml color blanco para la industria cosmética, este artículo tiene costos variables de \$5 pesos por pieza. Si los costos fijos son de \$150 pesos y cada artículo se vende en \$20 pesos. ¿Cuántas unidades debe producir para que la empresa logre una utilidad de \$100 pesos?
+
+	\begin{itemize}
+		\item \textbf{¿Existe claridad en el planteamiento del problema?} Probablemente la primera vez que se lee puede confundir un poco, pero después es f\'acil entender y notar que solicita dos valores principales, el \textit{coste de producción} y las \textit{utilidades}.
+		
+		\item \textbf{¿Se proporcionan los datos necesarios para resolver el problema?} Si, solo hay que tener cuidado con el valor al cual asignar la variable, como en la mayor\'ia de los problemas.
+		
+		\item \textbf{Prop\'on y resuelve un sistema de ecuaciones.}
+		\begin{multicols}{2}
+			\par Empezaremos definiendo las variables que ta tenemos, de manera que $cp$ sera el costo de producci\'on de $n$ piezas, $pp$ el costo de producci\'on por pieza, $np$ el n\'umero de piezas y $cf$ los costos fijos de producci\'on, de todo esto obtenemos que
+			$$ cp = np * pp + cf$$
+			
+			\par Despu\'es hay que calcular los ingresos en funci\'on de las piezas producidas.\footnote{Estamos suponiendo que todas las piezas producidas son vendidas} De manera que, manteniendo las definiciones anteriores, definimos $ip$ como el ingreso por $n$ piezas producida y $vp$ como el valor en que cada pieza se vende. Por lo que nos queda que
+			$$ ip = vp * np $$
+			
+			\par Con estos dos valores, el \textit{costo} e \textit{ingresos} por pieza producida, ya podemos calcular la utilidad por pieza producida, que representaremos con $up$. De donde nos queda que
+			\begin{eqnarray*}
+				up &=& ip - cp \\
+				&=& vp*np - (np * pp + cf) \\
+				&=& vp*np - np*pp - cf \\
+				up &=& np*(vp - pp) - cf
+			\end{eqnarray*}
+			
+			\par Y como el problema nos pide que tengamos una utilidad de $\$100$, sustituyendo todos los datos que nos da el problema, al final debemos resolver
+			\begin{eqnarray*}
+				up &=& np*(vp - pp) - cf \\
+				100 &=& np*(20 - 5) - 150 \\
+				np &=& \frac{100 + 150}{20 - 5} \\
+				np &=& 16.66
+			\end{eqnarray*}
+			
+			\par Al final, como no podemos producir $.66$ botellas, redondearemos al mayor inmediato para alcanzar la utilidad solicitada. Por lo que la \emph{\ul{\textbf{respuesta} es que se deben producir \textbf{17 botellas} para obtener una utilidad de {\$}100}}.
+		\end{multicols}
+	\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Bibliografia        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{thebibliography}{X}
+	\bibitem{basica} UnADM. (S/D). \textit{Primer semestre Algebra Lineal}. 13 de Julio de 2020, de Universidad Abierta y a Distancia de México, DCSBA. Sitio web: \url{https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BALI/unidad_01/descargables/BALI_U1_Contenido.pdf}
+\end{thebibliography}
+
+\end{document}
