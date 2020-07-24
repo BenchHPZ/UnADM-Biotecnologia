@@ -38,5 +38,5 @@ El __producto vectorial__ es una operación binaria que definimos entre vectores
 UnADM. (S/D). _Primer semestre Algebra Lineal_. 13 de Julio de 2020, de Universidad Abierta y a Distancia de México | DCSBA Sitio web: https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BALI/unidad_01/descargables/BALI_U1_Contenido.pdf
 	
 ## Retroalimentación
-![Retroalimentación](assets/AL-U1-A1-1.png)
+![Retroalimentación](assets/BALI-U1-A1-1.png)
 

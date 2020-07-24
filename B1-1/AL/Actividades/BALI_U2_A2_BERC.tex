@@ -1,0 +1,261 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{soul}
+
+\usepackage{graphicx}
+	\graphicspath{ {assets/} }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %%
+%%        Datos Trabajo     %%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[0]{Actividad 2. Actividad entregable – Representación Matricial}
+\newcommand{\materia}[0]{Álgebra Lineal}
+\newcommand{\grupo}[0]{BI-BALI-2002-B1-012}
+\newcommand{\unidad}[0]{Unidad 2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftex,
+            pdfauthor={bench},
+            pdftitle={\titulo},
+            pdfsubject={\materia},
+            pdfkeywords={\grupo, \unidad, UnADM},
+            pdfproducer={Latex with hyperref, or other system},
+            pdfcreator={pdflatex, or other tool}]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+	\includegraphics{../../../assets/logo-unadm} \\
+	\ \\ Benjam\'in Rivera \\
+	\bf{\titulo}\\\ \\}
+
+\author{
+	Universidad Abierta y a Distancia de México \\
+	TSU en Biotecnolog\'ia \\
+	\textit{Materia:} \materia \\
+	\textit{Grupo:} \grupo \\
+	\textit{Unidad:} \unidad \\
+	\\
+	\textit{Matricula:} ES202105994 }
+
+\date{\textit{Fecha de entrega:} \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Documento         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle\newpage
+
+\begin{enumerate}
+	\item Resolver
+	\begin{enumerate}
+		\item Sean 
+		$A = \begin{bmatrix}
+			5 & 4 & 3 \\
+			7 & 8 & 6 \\
+			6 & 3 & 1
+		\end{bmatrix}$ y 
+		$B = \begin{bmatrix}
+			-2&-5 &-3 \\
+			4 & 5 & 6 \\
+			7 & 8 & 3
+		\end{bmatrix}$  
+		realiza las siguientes operaciones
+		\begin{enumerate}
+			\item $A+B$ \\ Sabemos que la suma de matrices \'unicamente la podemos realizar cuando son de la misma direcci\'on y que es de elemento a elemento. Como en este caso se cumple eso, tenemos que
+				\begin{eqnarray*}
+					A + B &=& 	\begin{bmatrix}
+									5 & 4 & 3 \\
+									7 & 8 & 6 \\
+									6 & 3 & 1
+								\end{bmatrix} + \begin{bmatrix}
+									-2&-5 &-3 \\
+									4 & 5 & 6 \\
+									7 & 8 & 3
+								\end{bmatrix} \\
+					&=& \begin{bmatrix}
+					 		5-2 & 4-5 & 3-3 \\
+							7+4 & 8+5 & 6+6 \\
+							6+7 & 3+8 & 1+3
+						\end{bmatrix} \\
+					&=& \begin{bmatrix}
+							3 &-1 & 0 \\
+							11&13 &12 \\
+							13&11 &4
+						\end{bmatrix}
+				\end{eqnarray*}
+			
+			\item $A-B$ \\ Dado que la suma requiere de los mismos parametros que la resta, procede por la misma situaci\'on. Por lo que para la resta se da que
+				\begin{eqnarray*}
+					A - B &=& 	\begin{bmatrix}
+									5 & 4 & 3 \\
+									7 & 8 & 6 \\
+									6 & 3 & 1
+								\end{bmatrix} - \begin{bmatrix}
+									-2&-5 &-3 \\
+									4 & 5 & 6 \\
+									7 & 8 & 3
+								\end{bmatrix} \\
+					&=& \begin{bmatrix}
+					 		5+2 & 4+5 & 3+3 \\
+							7-4 & 8-5 & 6-6 \\
+							6-7 & 3-8 & 1-3
+						\end{bmatrix} \\
+					&=& \begin{bmatrix}
+							7 & 9 & 6 \\
+							3 & 3 & 0 \\
+							-1&-5 &-2
+						\end{bmatrix}
+				\end{eqnarray*}
+			
+			\item $A \times B$ \\ La multiplicaci\'on entre matrices siempre se puede hacer cuando las matrices son cuadradas y dimenisonalmente iguales entre si. Dado que estas lo cumplen, la multiplicaci\'on de A y B, da como resultado
+				\begin{eqnarray*}
+					A \times B &=& 	\begin{bmatrix}
+									5 & 4 & 3 \\
+									7 & 8 & 6 \\
+									6 & 3 & 1
+								\end{bmatrix} \times \begin{bmatrix}
+									-2&-5 &-3 \\
+									4 & 5 & 6 \\
+									7 & 8 & 3
+								\end{bmatrix} \\
+					&=& \begin{bmatrix}
+					 		5(-2)+4\cdot 4+3\cdot 7&	5(-5)+4\cdot 5+3\cdot 8&	5(-3)+4\cdot 6+3\cdot 3 \\
+							7(-2)+8\cdot 4+6\cdot 7&	7(-5)+8\cdot 5+6\cdot 8&	7(-3)+8\cdot 6+6\cdot 3 \\
+							6(-2)+3\cdot 4+1\cdot 7&	6(-5)+3\cdot 5+1\cdot 8&	6(-3)+3\cdot 6+1\cdot 3 \\
+						\end{bmatrix} \\
+					&=& \begin{bmatrix}
+							27 & 19 & 18 \\
+							60 & 53 & 45 \\
+							 7 & -7 &  3
+						\end{bmatrix}
+				\end{eqnarray*}
+			
+			\item $3A + 2B$ \\ Aqui es necesario combinar la suma de matrices y la multiplicaci\'on por escalar para obtener el resultado, por lo que
+				\begin{eqnarray*}
+					3A + 2B &=& 3\begin{bmatrix}
+									5 & 4 & 3 \\
+									7 & 8 & 6 \\
+									6 & 3 & 1
+								\end{bmatrix} + 2\begin{bmatrix}
+									-2&-5 &-3 \\
+									4 & 5 & 6 \\
+									7 & 8 & 3
+								\end{bmatrix} \\
+					&=&	\begin{bmatrix}
+							3*5 & 3*4 & 3*3 \\
+							3*7 & 3*8 & 3*6 \\
+							3*6 & 3*3 & 3*1
+						\end{bmatrix} + \begin{bmatrix}
+							5*-2& 5*-5& 5*-3 \\
+							5*4 & 5*5 & 5*6 \\
+							5*7 & 5*8 & 5*3
+						\end{bmatrix} \\
+					&=& \begin{bmatrix}
+							15 & 12 &  9 \\
+							21 & 24 & 18 \\
+							18 &  9 &  3
+						\end{bmatrix} + \begin{bmatrix}
+							-10 &-25 &-15 \\
+							 20 & 25 & 30 \\
+							 35 & 40 & 15
+						\end{bmatrix} \\
+					&=& \begin{bmatrix}
+							15-10 & 12-25 &  9-15 \\
+							21+20 & 24+25 & 18+30 \\
+							18+35 &  9+40 &  3+15
+						\end{bmatrix} \\
+					&=& \begin{bmatrix}
+							 5 &-13 & -6 \\
+							41 & 49 & 48 \\
+							53 & 49 & 18
+						\end{bmatrix}
+				\end{eqnarray*}
+		\end{enumerate}
+	\end{enumerate}
+
+	\item Encontrar la matriz principal y la matriz ampliada a los siguientes sistemas \\ Antes de comenzar es bueno recordar que la matriz principal es aquella que contiene a todos los coeficientes de l sistema de ecuaciones, los terminos independientes no son incluidos en est\'a, mientras que la matriz ampliada es la matriz principal concatenada con el vector columna de los terminos independientes en la forma normal del sistema de ecuaciones.
+	
+	\begin{multicols}{2}\begin{enumerate}
+		\item $\begin{pmatrix}
+				 x_1 - x_2 +4x_3 =  7 \\
+				4x_1 +2x_2 -2x_3 = 10 \\
+				2x_1 +3x_2 + x_3 = 23
+			\end {pmatrix}$
+			\\\ \\ \bf Matriz principal \\
+			$\begin{bmatrix}
+				1 &-2 & 4 \\
+				4 & 2 &-2 \\
+				2 & 3 & 1 \\
+			\end{bmatrix}$
+			\\ \bf Matriz ampliada \\
+			$\begin{bmatrix}
+				1 &-2 & 4 &  7\\
+				4 & 2 &-2 & 10\\
+				2 & 3 & 1 & 18\\
+			\end{bmatrix}$\\\ \\
+			
+		\item $\begin{pmatrix}
+				2x_1 + 3x_2 + x_3 = 4 \\
+				4x_1 + 2x_2 -2x_3 =10 \\
+				 x_1 - 3x_2 -3x_3 = 3
+			\end {pmatrix}$
+			\\\ \\ \bf Matriz principal \\
+			$\begin{bmatrix}
+				2 &-3 & 1 \\
+				4 & 2 &-2 \\
+				1 &-3 &-3 \\
+			\end{bmatrix}$
+			\\ \bf Matriz ampliada \\
+			$\begin{bmatrix}
+				2 &-3 & 1 & 4\\
+				4 & 2 &-2 &10\\
+				1 &-3 &-3 & 3\\
+			\end{bmatrix}$\\\ \\
+			
+		\item $\begin{pmatrix} 
+				 2x_1 - 6x_2 + 10x_3 + 7x_4 = 1 \\
+				-4x_1 - 3x_2 + 20x_3 +14x_4 = 1 \\
+				10x_1 - 9x_2 + 15x_3 +13x_4 =-1 \\
+				 3x_1 + 8x_2 - 30x_3 + 3x_4 = 1
+			\end {pmatrix}$
+			\\\ \\ \bf Matriz principal \\
+			$\begin{bmatrix}
+				 2 & -6 & 10 &  7\\
+				-4 & -3 & 20 & 14\\
+				10 & -9 & 15 & 13\\
+				 3 &  8 &-30 &  3
+			\end{bmatrix}$
+			\\ \bf Matriz ampliada \\
+			$\begin{bmatrix}
+				 2 & -6 & 10 &  7 & 1\\
+				-4 & -3 & 20 & 14 & 1\\
+				10 & -9 & 15 & 13 &-1\\
+				 3 &  8 &-30 &  3 & 1
+			\end{bmatrix}$\\\ \\
+			
+	\end{enumerate}\end{multicols}
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Bibliografia        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{thebibliography}{X}
+	\bibitem{biblio} UnADM. (S/D). \emph{Primer semestre Algebra Lineal}. \today, de Universidad Abierta y a Distancia de México \textbar{} DCSBA
+Sitio web:
+\url{https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BALI/unidad_01/descargables/BALI_U1_Contenido.pdf}
+\end{thebibliography}
+
+\end{document}
