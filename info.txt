@@ -1,6 +1,0 @@
-Info de entrada con matricula de UNADM, ya estamos aceptados a este momento
-
-Matricula: ES202105994 
-Pass:	   Cnff.123
-
-El curso de induccion no sera considerado para la admision en este periodo

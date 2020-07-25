@@ -29,10 +29,11 @@ la “Y” por la inicial de tu primer apellido y la “Z” por la inicial de t
 4. Subir la actividad al apartado de tareas correspondiente.
 
 ## Actividad
-En archiv latex
+En archivo [latex](./BALI_U2_A3_BERC.tex) y [pdf](./BALI_U2_A3_BERC.pdf). Además la comprobación se puede revisar en el [notebook](./BALI_U2_A3_BERC.ipynb)
 
 ### Fuentes de información
 
-UnADM. (S/D). _Primer semestre Algebra Lineal_. 13 de Julio de 2020, de Universidad Abierta y a Distancia de México | DCSBA Sitio web: https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BALI/unidad_01/descargables/BALI_U1_Contenido.pdf
+- UnADM. (S/D). _Primer semestre Algebra Lineal_. 24 de Julio de 2020, de Universidad Abierta y a Distancia de México | DCSBA Sitio web: https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BALI/unidad_01/descargables/BALI_U1_Contenido.pdf
+- BenchHPZ. (2020). Biotecnologia. 24 de julio de 2020, de GitHub Sitio web: https://github.com/BenchHPZ/UnADM-Biotecnologia
 
 

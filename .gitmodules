@@ -1,6 +1,0 @@
-[submodule "CIVUL"]
-	path = CIVUL
-	url = ./CIVUL/
-[submodule "0-CIVUL"]
-	path = 0-CIVUL
-	url = ./0-CIVUL
