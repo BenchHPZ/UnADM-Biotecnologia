@@ -29,16 +29,47 @@ __Fecha de entrega__: 10 Agosto a 16 de Agosto de 2020.
 
 ### __En álgebra, ¿Qué es un “determinante”?__
 
+La descripción formal de un determinante es
+
+> una forma multilineal alternada sobre un espacio vectorial
+
+y es utilizado para describir propiedades y caracteristicas matematicáticas en el area. Especificamente en _Álgebra_, los determinantes se aplican sobre las matrices, y se suele utilizar para obtener caracteristicas y soluciones de un sistema de ecuaciones representado por una matriz.
 
 ### __¿Cómo se obtiene el determinante de la matriz por cofactores?__
 
+El método de cofactores es una manera ordenada para obtener el determinante de una matriz. Este método consiste en ir calculando determinantes de _submatrices_, a los cuales se les llama cofactores, para calcular el de la matriz mayor. Este método se puede desarrollar por filas o por columnas.
+
+Sea $A \in M_{n \times m}$ una matriz de $n \times m$ y definimos al cofactor como
+> $$ \
+> 	C\_{ij} = (-1)^{i+j} \cdot det(M\_{ij}) \
+> $$
+
+.. <img src="assets/BALI-U3-A1-1.png" alt="formula" width="200"/>
+
+#### Por filas
+
+Tomamos la fila $i = k$, donde $k \in (1,2,...,n)$ es alguna de las filas. Entonces el determinante de $A$ esta definido por
+
+> $$ \
+> 	det(A) = \sum^n_{j=1} a_{ij} C_{ij} \
+> $$
+
+.. <img src="assets/BALI-U3-A1-2.png" alt="formula" width="200"/>
 
 ### Matrices y sus determinantes
 
+Tomamos la columna $j = k$, donde $k \in (1,2,...,m)$ es alguna de las columnas. Entonces el determinante de $A$ esta definido por
+
+> $$ \
+> 	det(A) = \sum^m_{i=1} a_{ij} C_{ij} \
+> $$
+
+.. <img src="assets/BALI-U3-A1-3.png" alt="formula" width="200"/>
 
 
 ## Retroalimentación
 
+Pendiente a que mis compañeros participen
 
 
 
