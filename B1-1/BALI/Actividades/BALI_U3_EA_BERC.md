@@ -22,11 +22,11 @@ __Fecha de entrega__: 31 Agosto a 6 de Septiembre de 2020.
   
 2. Calcular Determinantes, los menores y cofactores y resolver por el método de Cramer.
 
-3. El trabajo puede integrar
+3. El trabajo debe integrar
 	- Portada estandar
 	- Planteamiento del sistema
 	- Desarrollo y descripcion paso a paso de la matriz resuelta
-	> Responder la pregunta del problema
+	- Responder la pregunta del problema
 	
 4. Guardar actividad en PDF con nombre BALI_U3_EA_BERC
 
