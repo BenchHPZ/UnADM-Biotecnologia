@@ -44,23 +44,7 @@ unidad:
 
 ## Actividad
 
-Dado que el metodo de Crammer es un metodo para resolver los sistemas
-
-### __Calcular los determinantes por Cramer__
-
-Sea
-$$ A \begin{pmatrix}
-	5 & 4 & 3 \\ 
-	7 & 
-
- \end{pmatrix}
-$$
-
-
-### __Calcular determinantes de los sistemas__
-
-
-
+En [pdf](./BALI_U3_A2.BERC.pdf) y  el [archivo fuente](./BALI_U3_A2.BERC.tex)
 
 
 

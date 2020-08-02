@@ -34,12 +34,7 @@ __Fecha de entrega__: 24 Agosto a 30 de Agosto de 2020.
 
 ## Actividad
 
-### __Calcular los determinantes por Cramer__
-
-
-### __Calcular determinantes de los sistemas__
-
-
+En [pdf](./BALI_U3_A3.BERC.pdf) y  el [archivo fuente](./BALI_U3_A3.BERC.tex)
 
 
 

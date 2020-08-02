@@ -1,0 +1,307 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %%
+%%        Datos Trabajo     %%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[0]	{
+Actividad 3. Problemas sobre Determinantes}
+\newcommand{\materia}[0]{Álgebra Lineal}
+\newcommand{\grupo}[0]	{BI-BALI-2002-B1-012}
+\newcommand{\unidad}[0]	{Unidad 3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{soul}
+
+\usepackage{graphicx}
+	\graphicspath{ {assets/} }
+
+\usepackage{hyperref}
+	\hypersetup{
+			pdftex,
+		        pdfauthor={bench},
+		        pdftitle={\titulo},
+		        pdfsubject={\materia},
+		        pdfkeywords={\grupo, \unidad, UnADM},
+		        pdfproducer={Latex with hyperref, Ubuntu},
+		        pdfcreator={pdflatex, or other tool},
+			colorlinks=true,
+				linkcolor=red,
+				urlcolor=cyan,
+				filecolor=yellow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+	\includegraphics{../../../assets/logo-unadm} \\
+	\ \\ Benjam\'in Rivera \\
+	\bf{\titulo}\\\ \\}
+
+\author{
+	Universidad Abierta y a Distancia de México \\
+	TSU en Biotecnolog\'ia \\
+	\textit{Materia:} \materia \\
+	\textit{Grupo:} \grupo \\
+	\textit{Unidad:} \unidad \\
+	\\
+	\textit{Matricula:} ES202105994 }
+
+\date{\textit{Fecha de entrega:} \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Documento         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\newcommand{\dotsd}[0]	{\reflectbox{$\ddots$}}
+
+
+\begin{document}
+\maketitle\newpage
+
+\subsection*{Obtener los determinantes de las siguientes matrices por los métodos que se indican:}
+
+	\begin{quote}\begin{enumerate}[1.]
+		\item Regla de Sarrus.
+		\item Cofactores a primer rengl\'on.	\label{lst: cof ren 1}
+		\item Cofactores a segunda columna.	\label{lst: cof col 2}
+		\item Menores a primer rengl\'on.		\label{lst: men ren 1}
+		\item Menores a segunda columna.		\label{lst: men col 2}
+	\end{enumerate}\end{quote}
+
+	\par Dado que en \cite[p\'ag. 10]{basica} se indica que los cofactores se utilizan en el m\'etodo de menores, entonces consideraremos que (\ref{lst: cof ren 1}, \ref{lst: men ren 1}) y (\ref{lst: cof col 2}, \ref{lst: men col 2}) son los mismos ejercicios. De manera que en este ejercicio usaremos en total tres metodos sobre cada matr\'iz para obtener el determinante, los cuales seran
+	
+	\begin{quote}\begin{enumerate}[1.]
+		\item Regla de Sarrus.	
+		\item Menores y cofactores sobre primer rengl\'on.	
+		\item menores y cofactores sobre segunda columna.		
+	\end{enumerate}\end{quote}
+	
+	\par El m\'etodo de cofactores ya lo hemos utilizado en otras tareas, por lo que seguiremos los pasos ah\'i descritos\footnote{En todo caso se puede consultar en \cite[p\'ag. 10 y 11]{basica}}. Para Sarrus, usaremos $M_n$ para denotar el renglon $n$ de la matriz $M$, entonces seguiremos los siguientes pasos:
+	
+	\begin{quote}\begin{enumerate}
+		\item Generar la matriz 
+			$$M' = 
+				\begin{pmatrix}
+					\ddots&\dots&\dotsd\\
+					\dots & M& \dots	\\
+					\dotsd&\dots&\ddots\\
+					\dots & M_1 & \dots\\
+					\dots & M_2 & \dots
+				\end{pmatrix}$$
+		\item A partir de $M'$, se cumple que
+		\begin{eqnarray*}	
+			\det{M} &=& {M'}_{1,1} {M'}_{2,2} {M'}_{3,3} + 
+						{M'}_{2,1} {M'}_{3,2} {M'}_{4,3} +
+						{M'}_{3,1} {M'}_{4,2} {M'}_{5,3} - \\ & &(
+						{M'}_{5,1} {M'}_{4,2} {M'}_{3,3} +
+						{M'}_{4,1} {M'}_{3,2} {M'}_{2,3} +
+						{M'}_{3,1} {M'}_{2,2} {M'}_{1,3} )
+		\end{eqnarray*}
+	\end{enumerate}\end{quote}
+	
+	En esta actividad \'unicamente se corrobor\'o el valor de las determinantes, de cada matriz, en 
+	\cite[Actividad 3]{notebook}.
+
+\newpage
+\begin{multicols}{2}
+	\begin{enumerate}[A.]
+		\item Sea
+			$$A = \begin{pmatrix}
+				 2 &  4 &  1\\
+				 3 &  2 &  0\\
+				 7 &  1 &  3\\
+			\end{pmatrix}$$
+		Para \textbf{Sarru} tenemos que
+			$$A' = \begin{pmatrix}
+				 2 &  4 &  1\\
+				 3 &  2 &  0\\
+				 7 &  1 &  3\\
+				 2 &  4 &  1\\
+				 3 &  2 &  0\\
+			\end{pmatrix}$$
+		
+		por lo que
+			\begin{eqnarray*}	
+				\det{A} &=& (2)(2)(3) + (3)(1)(1) + (7)(4)(0) - \\ & &(  
+							(3)(4)(3) + (2)(1)(0) + (7)(2)(1) ) \\
+						&=& 12+3+0 - (36+0+14) = -35
+			\end{eqnarray*}
+			
+		Para \textbf{renglon 1} usaremos los siguientes menores:
+			$$\begin{vmatrix}
+				 2 &  0 \\
+				 1 &  3 \\
+			\end{vmatrix},
+			\begin{vmatrix}
+				 3 &  0 \\
+				 7 &  3 \\
+			\end{vmatrix},
+			\begin{vmatrix}
+				 3 &  2 \\
+				 7 &  1 \\
+			\end{vmatrix}$$
+		para usarlos con los cofactores y
+			\begin{eqnarray*}
+				\det(A) &=&
+					2 \begin{vmatrix}
+						 2 &  0 \\
+						 1 &  3 \\
+					\end{vmatrix} -
+					4 \begin{vmatrix}
+						 3 &  0 \\
+						 7 &  3 \\
+					\end{vmatrix} +
+					1 \begin{vmatrix}
+						 3 &  2 \\
+						 7 &  1 \\
+					\end{vmatrix} \\
+					&=& 2(6) - 4(9) - 11 = -35
+			\end{eqnarray*}
+			
+		Y para \textbf{columna 2} usaremos los menores
+			$$\begin{vmatrix}
+				 3 &  0 \\
+				 7 &  3 \\
+			\end{vmatrix},
+			\begin{vmatrix}
+				 2 &  1 \\
+				 7 &  3 \\
+			\end{vmatrix},
+			\begin{vmatrix}
+				 4 &  3 \\
+				 1 &  0 \\
+			\end{vmatrix}$$
+		sobre los cofactores
+			\begin{eqnarray*}
+				\det(A) &=&
+					4 \begin{vmatrix}
+						 3 &  0 \\
+						 7 &  3 \\
+					\end{vmatrix} -
+					2 \begin{vmatrix}
+						 2 &  1 \\
+						 7 &  3 \\
+					\end{vmatrix} +
+					1 \begin{vmatrix}
+						 4 &  3 \\
+						 1 &  0 \\
+					\end{vmatrix} \\
+					&=& - 4(9) + 2(-1) - (-3) = -35
+			\end{eqnarray*}
+		
+		
+		\item Sea B
+			$$B = \begin{pmatrix}
+				-1 &  2 &  3\\
+				 2 & -1 &  3\\
+				 3 & -1 &  2\\
+			\end{pmatrix}$$
+			
+		Para \textbf{Sarrus} tenemos que 
+			$$B = \begin{pmatrix}
+				-1 &  2 &  3\\
+				 2 & -1 &  3\\
+				 3 & -1 &  2\\
+				-1 &  2 &  3\\
+				 2 & -1 &  3\\
+			\end{pmatrix}$$
+			
+		por lo que 
+			\begin{eqnarray*}	
+				\det{B} &=& (-1)(-1)(2) + (2)(-1)(3) + (3)(2)(3) - \\ & &(  
+							(2)(2)(2) + (-1)(-1)(3) + (2)(-1)(3) ) \\
+						&=& 12
+			\end{eqnarray*}
+			
+		Para \textbf{renglon 1} usaremos los siguientes menores:
+			$$\begin{vmatrix}
+				 -1 &  3 \\
+				 -1 &  2 \\
+			\end{vmatrix},
+			\begin{vmatrix}
+				 2 &  3 \\
+				 3 &  2 \\
+			\end{vmatrix},
+			\begin{vmatrix}
+				 2 & -1 \\
+				 3 & -1 \\
+			\end{vmatrix}$$
+		para usarlos con los cofactores y
+			\begin{eqnarray*}
+				\det(B) &=&
+					-1 \begin{vmatrix}
+						 -1 &  3 \\
+						 -1 &  2 \\
+					\end{vmatrix} -
+					2 \begin{vmatrix}
+						 2 &  3 \\
+						 3 &  2 \\
+					\end{vmatrix} +
+					3 \begin{vmatrix}
+						 2 & -1 \\
+						 3 & -1 \\
+					\end{vmatrix} \\
+					&=& -1(1) - 2(-5) + 3 = 12
+			\end{eqnarray*}
+			
+		Y para \textbf{columna 2} usaremos los menores
+			$$\begin{vmatrix}
+				 2 &  3 \\
+				 3 &  2 \\
+			\end{vmatrix},
+			\begin{vmatrix}
+				-1 &  3 \\
+				 3 &  2 \\
+			\end{vmatrix},
+			\begin{vmatrix}
+				-1 &  3 \\
+				 2 &  3 \\
+			\end{vmatrix}$$
+		sobre los cofactores
+			\begin{eqnarray*}
+				\det(B) &=&
+					- 2 \begin{vmatrix}
+						 2 &  3 \\
+						 3 &  2 \\
+					\end{vmatrix} -
+					1 \begin{vmatrix}
+						-1 &  3 \\
+						 3 &  2 \\
+					\end{vmatrix} +
+					1 \begin{vmatrix}
+						-1 &  3 \\
+						 2 &  3 \\
+					\end{vmatrix} \\
+					&=& - 2(-5) - 1(-11) + 1(-9) = 12
+			\end{eqnarray*}
+		
+	\end{enumerate}
+\end{multicols}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Bibliografia        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{thebibliography}{X}
+
+	\bibitem{basica} UnADM. (2020). \textit{U3 $|$ Determinantes}. \today, de División de Ciencias de la Salud, Biológicas y Ambientales Sitio web: \url{https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BALI/unidad_03/descargables/BALI_U3_Contenido.pdf}
+	
+	\bibitem{github}BenchHPZ. (2020). \textit{Biotecnolog\'ia}. \today, de GitHub Sitio web: \url{https://github.com/BenchHPZ/UnADM-Biotecnologia/tree/master/B1-1/BALI}
+	
+	\bibitem{notebook} BenchHPZ. (2020). \textit{Unidad 3}. \today, de GitHub Sitio web: \url{https://github.com/BenchHPZ/UnADM-Biotecnologia/tree/master/B1-1/BALI/Actividades/BALI_U3_BERC.ipynb}
+\end{thebibliography}
+
+\end{document}
