@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %%
+%%        Datos Trabajo     %%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[0]{Autorreflexión. Unidad 3}
+\newcommand{\materia}[0]{\'Algebra Lineal}
+\newcommand{\grupo}[0]{BI-BALI-2002-B1-012}
+\newcommand{\unidad}[0]{Unidad 3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{soul}
+
+\usepackage{graphicx}
+	\graphicspath{ {assets/} }
+
+\usepackage{hyperref}
+	\hypersetup{
+			pdftex,
+		        pdfauthor={bench},
+		        pdftitle={\titulo},
+		        pdfsubject={\materia},
+		        pdfkeywords={\grupo, \unidad, UnADM},
+		        pdfproducer={Latex with hyperref, Ubuntu},
+		        pdfcreator={pdflatex, or other tool},
+			colorlinks=true,
+				linkcolor=red,
+				urlcolor=cyan,
+				filecolor=yellow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+	\includegraphics{../../../assets/logo-unadm} \\
+	\ \\ Benjam\'in Rivera \\
+	\bf{\titulo}\\}
+
+\author{
+	Universidad Abierta y a Distancia de México \\
+	TSU en Biotecnolog\'ia \\
+	\textit{Materia:} \materia \\
+	\textit{Grupo:} \grupo \\
+	\textit{Unidad:} \unidad \\
+	\\
+	\textit{Matricula:} ES202105994 }
+
+\date{\textit{Fecha de entrega:} \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Documento         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Documento         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+\section{Actividad}
+
+\subsection{¿Cuáles son los problemas a los que te enfrentaste en esta unidad?}
+
+	\par Para esta unidadad los métodos en general fuero bastante tediosos. Además, se nota que mientras más reales van siendo los problemas, el tamaño de las matrices va aumentando considerablemente, y con ellas la complejidad de los métodos.
+
+	\par El prinicipal problema con el que me enfrente constantemente, fueron los errores de dedo que se porpagaron a lo largo de mi trabajo, tanto en esta unidad como en las anteriores, me sucedio más de una vez que no estaba resolviendo el problema del ejercicio por haberme equivocado en algún número. Otro de los problemas que se repitio bastante, fueron los errores en mi aritmética, ya que mientras más grandes son los números, mi concentración es menor y cometo más errores.
+	
+	
+\subsection{¿Cuáles de los métodos estudiados en esta unidad es el que consideras es el más sencillo para su aplicación en tu carrera? }
+
+\paragraph{Respecto a determinantes}
+	\par Creo que para matrices pequeñas\footnote{Menores a $4 \times 4$} la \textbf{regla de Sarrus} es el menos complejo y más intuitivo de aplicar; sin embargo, para matrices más grandes, creo que es mejor utilizar menores y cofactores, ya que es más díficil perderse con él.
+
+\paragraph{Respecto a sistemas de ecuaciones} En esto el \textbf{método de Cramer} no tiene comparación, ya que arriba de matrices de $3 \times 3$, requeriras menos operaciones que en cualquiera de los otros métodos.
+
+\subsubsection*{Nota}
+	\par Sin embargo, a pesar de que todo lo que aprendimos en este curso lo considero necesario y util, creo que, tanto en el ámbito académico como industrial, sera bastante extraño que estemos resolviendo operaciones a mano. Debido al tamaño de los sistemas y la cantidad de información con las que se trabajan, todo sera por computadora.
+	
+\section{Menciona que es lo que consideras mejorar en esta unidad}
+
+	\par Siguiendo el comentario de la \textit{Nota anterior}, y dado que esta no es una carrera que tenga como objetivo que los alumnos aprendan los fundamentos de las matemáticas, creo que sería bastante útil que, en este curso, hubiera una introducción a algún software que nos permita realizar operaciones de manera más eficiente. Fuera de lo anterior, el material \cite{biblio} me parecio bastante completo y las fuentes externas que compartio el profesor muy acertadas.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Bibliografia        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\begin{thebibliography}{X}
+	\bibitem{biblio} UnADM. (2020). \textit{U3 $|$ Determinantes}. 2 de agosto de 2020, de División de Ciencias de la Salud, Biológicas y Ambientales Sitio web: \url{https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BALI/unidad_03/descargables/BALI_U3_Contenido.pdf}
+
+\end{thebibliography}
+
+\end{document}

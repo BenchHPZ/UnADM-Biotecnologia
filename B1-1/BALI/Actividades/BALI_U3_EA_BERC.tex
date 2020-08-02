@@ -1,0 +1,419 @@
+\documentclass[12pt, landscape]{article}
+\usepackage[spanish]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %%
+%%        Datos Trabajo     %%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[0]	{
+Evidencia de aprendizaje}
+\newcommand{\materia}[0]{Álgebra Lineal}
+\newcommand{\grupo}[0]	{BI-BALI-2002-B1-012}
+\newcommand{\unidad}[0]	{Unidad 3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{soul}
+
+\usepackage{graphicx}
+	\graphicspath{ {assets/} }
+
+\usepackage{hyperref}
+	\hypersetup{
+			pdftex,
+		        pdfauthor={bench},
+		        pdftitle={\titulo},
+		        pdfsubject={\materia},
+		        pdfkeywords={\grupo, \unidad, UnADM},
+		        pdfproducer={Latex with hyperref, Ubuntu},
+		        pdfcreator={pdflatex, or other tool},
+			colorlinks=true,
+				linkcolor=red,
+				urlcolor=cyan,
+				filecolor=yellow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+	\includegraphics{../../../assets/logo-unadm} \\
+	\ \\ Benjam\'in Rivera \\
+	\bf{\titulo}\\\ \\}
+
+\author{
+	Universidad Abierta y a Distancia de México \\
+	TSU en Biotecnolog\'ia \\
+	\textit{Materia:} \materia \\
+	\textit{Grupo:} \grupo \\
+	\textit{Unidad:} \unidad \\
+	\\
+	\textit{Matricula:} ES202105994 }
+
+\date{\textit{Fecha de entrega:} \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Documento         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\newcommand{\dotsd}[0]	{\reflectbox{$\ddots$}}
+
+
+\begin{document}
+\maketitle\newpage
+
+\section*{Lee el problema, caclcula los determinantes de la matriz asiciada y resuelve sistema}
+
+\subsection*{Problema}
+	\par En el laboratorio de investigación científica de una prestigiosa Universidad se trabaja para encontrar un nuevo tipo de plaguicida para eliminar cierta enfermedad que ataca a diversos cultivos. Se realizarán cuatro muestras de plaguicida, para determinar la efectividad de cada una. Este compuesto se pretende elaborar con productos sintéticos y naturales de cuatro tipos: A, B, C y D. Las cantidades, que se medirán en gramos se representan en la siguiente matriz:
+	
+\begin{figure}[h]
+	\centering
+	\begin{tabular}{|l||l l l l|}
+		\hline
+			Muestra & P1 & P2 & P3 & P4\\
+		\hline\hline
+			A & 45 & 29 & 74 & 34\\
+			B & 30 & 10 & 25 & 87\\
+			C & 17 & 49 & 27 & 25\\
+			D & 25 & 15 & 30 & 54\\
+		\hline
+	\end{tabular}
+	\caption{Tabla de muestras y relaciones}
+	\label{tab: muestras}
+\end{figure}
+	
+	Los científicos desean obtener un plaguicida con las siguientes cantidades: 4222 gramos en la muestra A, 3875 de la muestra B, 3001 de la muestra C y 3090 de la muestra D. Si esto es posible, ¿Qué cantidad de cada producto básico se necesita para formar este plaguicida?
+	
+	
+\subsection*{Planteamiento}
+	\par Supondremos que se debe poner la misma relaci\'on de cada uno de los productos en cada muestra, por lo que el peso total de cada muestra quedara definida por esta relaci\'on y la cantiad especificada en la tabla \ref{tab: muestras}.
+	\par En base a lo anterior, la matriz extendida que podemos asociar a este problema es la siguiente:
+	
+	$$\begin{pmatrix}
+		45 & 29 & 74 & 34 && 4222\\
+		30 & 10 & 25 & 87 && 3875\\
+		17 & 49 & 27 & 25 && 3001\\
+		25 & 15 & 30 & 54 && 3090\\
+	\end{pmatrix}$$
+	y buscaremos los $x_1, x_2, x_3, x_4$ que nos den los pesos solicitados para cada muestra.
+
+
+\subsection*{Soluci\'on}
+	Dado que trabajaremos con la matriz extendida
+		$$\begin{pmatrix}
+			45 & 29 & 74 & 34 && 4222\\
+			30 & 10 & 25 & 87 && 3875\\
+			17 & 49 & 27 & 25 && 3001\\
+			25 & 15 & 30 & 54 && 3090\\
+		\end{pmatrix}$$
+	empezaremos por identificar las sub matrices de cada variable y la del sistema, las cuales son
+	\begin{eqnarray*}
+		\delta = \begin{pmatrix}
+					45 & 29 & 74 & 34 \\
+					30 & 10 & 25 & 87 \\
+					17 & 49 & 27 & 25 \\
+					25 & 15 & 30 & 54 \\
+				\end{pmatrix} &,&
+		\delta_{x_1} = \begin{pmatrix}
+					4222 & 29 & 74 & 34 \\
+					3875 & 10 & 25 & 87 \\
+					3001 & 49 & 27 & 25 \\
+					3090 & 15 & 30 & 54 \\
+				\end{pmatrix} \\
+		\delta_{x_2} = \begin{pmatrix}
+					45 & 4222 & 74 & 34 \\
+					30 & 3875 & 25 & 87 \\
+					17 & 3001 & 27 & 25 \\
+					25 & 3090 & 30 & 54 \\
+				\end{pmatrix} 
+		\delta_{x_3} &=& \begin{pmatrix}
+					45 & 29 & 4222 & 34 \\
+					30 & 10 & 3875 & 87 \\
+					17 & 49 & 3001 & 25 \\
+					25 & 15 & 3090 & 54 \\
+				\end{pmatrix}
+		\delta_{x_4} = \begin{pmatrix}
+					45 & 29 & 74 & 4222 \\
+					30 & 10 & 25 & 3875 \\
+					17 & 49 & 27 & 3001 \\
+					25 & 15 & 30 & 3090 \\
+				\end{pmatrix} \\
+	\end{eqnarray*}
+	
+	\par Ahora, para calcular las determinantes de estas matrices, usaremos el \textbf{m\'etodo de cofactores}. Y para no hacer el procedimiento demsiado tedioso \'unicamente plasmare el procedimiento completo de la matriz del sistema $\delta$, de las dem\'as \'unicamente sera superficial. 
+	\par De manera que, para la determinante del sistema, tenemos que
+	
+	\begin{eqnarray*}
+		\Delta &=& \det \begin{pmatrix}
+						45 & 29 & 74 & 34 \\
+						30 & 10 & 25 & 87 \\
+						17 & 49 & 27 & 25 \\
+						25 & 15 & 30 & 54 \\
+					\end{pmatrix} \\
+				&=& 45 \begin{vmatrix}
+						10 & 25 & 87 \\
+						49 & 27 & 25 \\
+						15 & 30 & 54 \\
+					\end{vmatrix}
+					 - 29 \begin{vmatrix}
+							30 & 25 & 87 \\
+							17 & 27 & 25 \\
+							25 & 30 & 54 \\
+						\end{vmatrix}
+					 + 74 \begin{vmatrix}
+							30 & 10 & 87 \\
+							17 & 49 & 25 \\
+							25 & 15 & 54 \\
+						\end{vmatrix}
+					 - 34 \begin{vmatrix}
+							30 & 10 & 25  \\
+							17 & 49 & 27  \\
+							25 & 15 & 30  \\
+						\end{vmatrix} \\
+	\end{eqnarray*}
+	
+	y para los determinantes de este subsistema usaremos la \textbf{regla de Sarrus}
+	
+	\begin{eqnarray*}
+		&\det& \begin{pmatrix}
+					10 & 25 & 87 \\
+					49 & 27 & 25 \\
+					15 & 30 & 54 \\
+				\end{pmatrix} =
+			 	\begin{vmatrix}
+					10 & 25 & 87 \\
+					49 & 27 & 25 \\
+					15 & 30 & 54 \\
+					10 & 25 & 87 \\
+					49 & 27 & 25 \\
+				\end{vmatrix} \\
+			&=& (10)(27)(54)  + (49)(30)(87)  + (15)(25)(25) -((15)(27)(87)  + (49)(25)(54)  + (10)(30)(25) ) \\
+			&=& 14508 + 127890 + 9375 - (35235 + 66150 + 7500) = \text{\underline {42960}} \\ && \\
+		&\det& \left(\begin{array}{rrr}
+					30 & 25 & 87 \\
+					17 & 27 & 25 \\
+					25 & 30 & 54
+				\end{array}\right) =
+				\left|\begin{array}{rrr}
+					30 & 25 & 87 \\
+					17 & 27 & 25 \\
+					25 & 30 & 54 \\
+					30 & 25 & 87 \\
+					17 & 27 & 25
+				\end{array}\right| \\
+			&=& (30)(27)(54)  + (17)(30)(87)  + (25)(25)(25) -((25)(27)(87)  + (30)(30)(25)  + (17)(25)(54) ) = -440 \\ && \\
+		&\det& \left(\begin{array}{rrr}
+					30 & 10 & 87 \\
+					17 & 49 & 25 \\
+					25 & 15 & 54
+				\end{array}\right) = 
+				\left|\begin{array}{rrr}
+					30 & 10 & 87 \\
+					17 & 49 & 25 \\
+					25 & 15 & 54 \\
+					30 & 10 & 87 \\
+					17 & 49 & 25
+				\end{array}\right| \\
+			&=& (30)(49)(54)  + (17)(15)(87)  + (25)(10)(25) -((25)(49)(87)  + (30)(15)(25)  + (17)(10)(54) ) = -19190 \\ && \\
+		&\det& \left(\begin{array}{rrr}
+					30 & 10 & 25 \\
+					17 & 49 & 27 \\
+					25 & 15 & 30
+				\end{array}\right) =
+				\left|\begin{array}{rrr}
+					30 & 10 & 25 \\
+					17 & 49 & 27 \\
+					25 & 15 & 30 \\
+					30 & 10 & 25 \\
+					17 & 49 & 27
+				\end{array}\right| \\
+			&=& (30)(49)(30)  + (17)(15)(25)  + (25)(10)(27) -((25)(49)(25)  + (30)(15)(27)  + (17)(10)(30) ) = 9350
+	\end{eqnarray*}
+	
+	y ahora si, con los valores de los determinantes de los menores, podemos evaluar para resolver
+	
+	\begin{eqnarray*}
+		\Delta &=& 45 \left|\begin{array}{rrr}
+						10 & 25 & 87 \\
+						49 & 27 & 25 \\
+						15 & 30 & 54
+					\end{array}\right| 
+					-29 \left|\begin{array}{rrr}
+						30 & 25 & 87 \\
+						17 & 27 & 25 \\
+						25 & 30 & 54
+					\end{array}\right| 
+					+74 \left|\begin{array}{rrr}
+						30 & 10 & 87 \\
+						17 & 49 & 25 \\
+						25 & 15 & 54
+					\end{array}\right| 
+					-34 \left|\begin{array}{rrr}
+						30 & 10 & 25 \\
+						17 & 49 & 27 \\
+						25 & 15 & 30
+					\end{array}\right| \\
+				 &=& 45(42960) -29(-440) +74(-19190) -34(9350) = 208000
+	\end{eqnarray*}
+	
+	Y continuamos de manera similar con las otras determinantes del sistema, las de las variables. Para $\Delta_{x_1}$ se da que
+
+	\begin{eqnarray*}
+		\Delta_{x_1} &=& \left(\begin{array}{rrrr}
+							4222 & 29 & 74 & 34 \\
+							3875 & 10 & 25 & 87 \\
+							3001 & 49 & 27 & 25 \\
+							3090 & 15 & 30 & 54
+						\end{array}\right) \\
+					&=& 4222 \left|\begin{array}{rrr}
+						10 & 25 & 87 \\
+						49 & 27 & 25 \\
+						15 & 30 & 54
+					\end{array}\right| 
+					-29 \left|\begin{array}{rrr}
+						3875 & 25 & 87 \\
+						3001 & 27 & 25 \\
+						3090 & 30 & 54
+					\end{array}\right| 
+					+74 \left|\begin{array}{rrr}
+						3875 & 10 & 87 \\
+						3001 & 49 & 25 \\
+						3090 & 15 & 54
+					\end{array}\right| 
+					-34 \left|\begin{array}{rrr}
+						3875 & 10 & 25 \\
+						3001 & 49 & 27 \\
+						3090 & 15 & 30
+						\end{array}\right| \\
+					&=&  4222(42960) -29(1197600) +74(-1304280) -34(1401000) = 2496000
+	\end{eqnarray*}
+	para $\Delta_{x_2}$ sigue de 
+	\begin{eqnarray*}
+		\Delta_{x_2} &=& \left(\begin{array}{rrrr}
+							45 & 4222 & 74 & 34 \\
+							30 & 3875 & 25 & 87 \\
+							17 & 3001 & 27 & 25 \\
+							25 & 3090 & 30 & 54
+						\end{array}\right) \\
+					&=&  +45 \left|\begin{array}{rrr}
+						3875 & 25 & 87 \\
+						3001 & 27 & 25 \\
+						3090 & 30 & 54
+					\end{array}\right| 
+					-4222 \left|\begin{array}{rrr}
+						30 & 25 & 87 \\
+						17 & 27 & 25 \\
+						25 & 30 & 54
+					\end{array}\right| 
+					+74 \left|\begin{array}{rrr}
+						30 & 3875 & 87 \\
+						17 & 3001 & 25 \\
+						25 & 3090 & 54
+					\end{array}\right| 
+					-34 \left|\begin{array}{rrr}
+						30 & 3875 & 25 \\
+						17 & 3001 & 27 \\
+						25 & 3090 & 30
+					\end{array}\right| \\
+					&=& 45(1197600) -4222(-440) +74(-548320) -34(275000) = 5824000
+	\end{eqnarray*}
+	y de $\Delta_{x_3}$ obtenemos que
+	\begin{eqnarray*}
+		\Delta_{x_3} &=& \left(\begin{array}{rrrr}
+							45 & 29 & 4222 & 34 \\
+							30 & 10 & 3875 & 87 \\
+							17 & 49 & 3001 & 25 \\
+							25 & 15 & 3090 & 54
+						\end{array}\right) \\
+					&=&  45 \left|\begin{array}{rrr}
+						10 & 3875 & 87 \\
+						49 & 3001 & 25 \\
+						15 & 3090 & 54
+					\end{array}\right| 
+					-29 \left|\begin{array}{rrr}
+						30 & 3875 & 87 \\
+						17 & 3001 & 25 \\
+						25 & 3090 & 54
+					\end{array}\right| 
+					+4222 \left|\begin{array}{rrr}
+						30 & 10 & 87 \\
+						17 & 49 & 25 \\
+						25 & 15 & 54
+					\end{array}\right| 
+					-34 \left|\begin{array}{rrr}
+						30 & 10 & 3875 \\
+						17 & 49 & 3001 \\
+						25 & 15 & 3090
+					\end{array}\right|  \\
+					&=& 45(1304280) -29(-548320) +4222(-19190) -34(-341950) = 5200000
+	\end{eqnarray*}
+	y por \'ultimo, con $\Delta_{x_4}$, nos da que
+	\begin{eqnarray*}
+		\Delta_{x_4} &=& \left(\begin{array}{rrrr}
+							45 & 29 & 74 & 4222 \\
+							30 & 10 & 25 & 3875 \\
+							17 & 49 & 27 & 3001 \\
+							25 & 15 & 30 & 3090
+						\end{array}\right)  \\
+					&=& 45 \left|\begin{array}{rrr}
+						10 & 25 & 3875 \\
+						49 & 27 & 3001 \\
+						15 & 30 & 3090
+					\end{array}\right| 
+					-29 \left|\begin{array}{rrr}
+						30 & 25 & 3875 \\
+						17 & 27 & 3001 \\
+						25 & 30 & 3090
+					\end{array}\right| 
+					+74 \left|\begin{array}{rrr}
+						30 & 10 & 3875 \\
+						17 & 49 & 3001 \\
+						25 & 15 & 3090
+					\end{array}\right| 
+					-4222 \left|\begin{array}{rrr}
+						30 & 10 & 25 \\
+						17 & 49 & 27 \\
+						25 & 15 & 30
+					\end{array}\right|  \\
+					&=& 45(1401000) -29(-275000) +74(-341950) -4222(9350) = 6240000
+	\end{eqnarray*}
+	
+	Una vez que ya tenemos los determinantes del sistema, procedemos a aplicar \textbf{Cramer}, para obtener al final
+	\begin{eqnarray*}
+		\Delta = 208000,\quad \Delta_{x_1} = 2496000,\quad \Delta_{x_2} &=& 5824000,\quad \Delta_{x_3} = 5200000,\quad \Delta_{x_4} = 6240000 \\
+		\text{por lo tanto, las soluciones del sistema son }&&\\
+		x_1 = \frac{\Delta_{x_1}}{\Delta} &=& \frac{2496000}{208000} = 12 \\
+		x_2 = \frac{\Delta_{x_2}}{\Delta} &=& \frac{5824000}{208000} = 28 \\
+		x_3 = \frac{\Delta_{x_3}}{\Delta} &=& \frac{5200000}{208000} = 25 \\
+		x_4 = \frac{\Delta_{x_4}}{\Delta} &=& \frac{6240000}{208000} = 30 \\
+	\end{eqnarray*}
+	
+\subsection*{Resultados}
+
+	\par De manera que, para que los investigadores obtengan \textit{4222 gramos en la muestra A, 3875 de la muestra B, 3001 de la muestra C y 3090 de la muestra D}, deben de poner \textbf{12 raciones del Producto 1, 28 del Producto 2, 25 del Producto 3 y 30 del Producto 4}.
+	
+	
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Bibliografia        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{thebibliography}{X}
+
+	\bibitem{basica} UnADM. (2020). \textit{U3 $|$ Determinantes}. \today, de División de Ciencias de la Salud, Biológicas y Ambientales Sitio web: \url{https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BALI/unidad_03/descargables/BALI_U3_Contenido.pdf}
+	
+	\bibitem{github}BenchHPZ. (2020). \textit{Biotecnolog\'ia}. \today, de GitHub Sitio web: \url{https://github.com/BenchHPZ/UnADM-Biotecnologia/tree/master/B1-1/BALI}
+	
+	\bibitem{notebook} BenchHPZ. (2020). \textit{Unidad 3}. \today, de GitHub Sitio web: \url{https://github.com/BenchHPZ/UnADM-Biotecnologia/tree/master/B1-1/BALI/Actividades/BALI_U3_BERC.ipynb}
+\end{thebibliography}
+
+\end{document}
