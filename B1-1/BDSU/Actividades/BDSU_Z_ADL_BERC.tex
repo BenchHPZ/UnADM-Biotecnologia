@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %%
+%%        Datos Trabajo     %%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[0]{Asignación a cargo del Docente}
+\newcommand{\materia}[0]{Desarrollo Sustentable}
+\newcommand{\grupo}[0]{ES202105994}
+\newcommand{\unidad}[0]{Unidad 3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{soul}
+
+\usepackage{graphicx}
+	\graphicspath{ {assets/} }
+
+\usepackage{hyperref}
+	\hypersetup{
+			pdftex,
+		        pdfauthor={bench},
+		        pdftitle={\titulo},
+		        pdfsubject={\materia},
+		        pdfkeywords={\grupo, \unidad, UnADM},
+		        pdfproducer={Latex with hyperref, Ubuntu},
+		        pdfcreator={pdflatex, or other tool},
+			colorlinks=true,
+				linkcolor=red,
+				urlcolor=cyan,
+				filecolor=yellow}
+				
+				
+\usepackage{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+	\includegraphics{../../../assets/logo-unadm} \\
+	\ \\ Benjam\'in Rivera \\
+	\bf{\titulo}\\\ \\}
+
+\author{
+	Universidad Abierta y a Distancia de México \\
+	TSU en Biotecnolog\'ia \\
+	\textit{Materia:} \materia \\
+	\textit{Grupo:} \grupo \\
+	\textit{Unidad:} \unidad \\
+	\\
+	\textit{Matricula:} ES202105994 }
+
+\date{\textit{Fecha de entrega:} \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Documento         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle\newpage
+
+\begin{longtable}{|p{3cm}|p{7cm} p{4cm}|}
+\hline
+	\bf Indicador &\bf Significado &\bf Forma de medir\\
+\hline
+
+	PIB (Producto interno Bruto) & "[...] el  rey  de  los  indicadores  económicos, el más citado y el que mejor da una imagen de la marcha macroeconómica en el momento. "\cite[p113]{ine}. Es la magnitud macroecon\'omica que expresa el valor monetario de la producci\'on de bienes y servicios de un pa\'is. Existen dos medidas del PIB relevantes, el nominal y el real. & Para medirlo es necesario conocer con alto detalle todas las transacciones realizadas en una zona; se necesita conocer que tanto se mueve el dinero. \\
+	IDH (Indice del Desarrollo Humano) & Es un indicador por pais del desarrollo humano, es obtenid mediante las dimensiones fundamentales del desarrollo humano y se sentra en tres asectos del desarrollo humano, la salud, la educaci\'on y la riqueza. & Es una combinaci\'on estadistica de la \textit{Esperanza de Vida}, del \textit{nivel Educativo} y del \textit{PIB pr capita} \\
+	
+	\bf INEGI \\ & & \\
+	Confianza del consumidor & Es un indicador que busca entender el sentir de los consumidores respecto a los prestadores de servicios y vendedores de productos. & Se realizan encuestas a grupos representativos \\
+	Indicadores de ocupaci\'on y empleao & Indica la cantidad de personas que estan empleadas en el pa\'is y se considera como un reflejo del bienestar laboral; incluye antigüedad, sueldo, ocupaci\'on, entre otros. & Se obtiene con un cruce de datos entre los recopilados por el INEGI, y los que tienen otras instituciones como el IMSS, el ISSSTE, entre otros. \\
+	Actividad industrial & Trata de ser una medida que refleje la acciones realizadas en el sector industrial, incluyendo personas empleadas, tiempo de empleamiento, caracter\'isticas de la industria, entre otros. & Implica un cruce de datos entre las bases publicas empresariales y los datos del SAT, adem\'as de otras instituciones involucradas. \\
+	Establecimientos comerciales & Es la cantidad de locales fisicos que se utilizan para actividades econ\'omicas activas y registradas.  & Para obtener esta medida se deben utilizar datos de multiples instituciones que lleven registros relacionados. \\
+	Indice nacional de precios al consumidor & Es la lista de precios que se ofrecen al consumidor por parte de los establecimientos de productos. En teor\'ia todos los vendedores de productos deben de mantener esta lista actualizada. & Para obtenerla se revisan las actualizaciones y se hacen estimaciones. \\
+	Indice nacional de precios al productor & A diferencia del anterior, este indice representa los precios que se publican como actuales para que los productores obtengan los prodcutos. Estas listas deben ser distintas para que los productores puedan vender a precios accesibles a los consumidores. & Se utilizan las mismas fuentes y t\'ecnicas que el anterior. \\
+	
+	\bf BANXICO \\ &  & \\
+	Estadisica de remesas familiares & Es la cantidad de dinero que ingresa al pa\'is como apoyo a las familias locales de parte de sus familiares que trabajan en el extranjero. & Requiere verificar datos de distintas instituciones bancarias utilizadas para mandar y recibir dinero internacinoalmente. \\
+	Minuta sobre la reuni\'on de la junta de Gobierno & Es el borrador que se hace de las reuniones de la Junta de Gobierno, representa las ideas sin clasurar o procesar de las decisiones tomadas por quienes dirigen el pa\'is. & Al ser BANXICO una instituci\'on federal de gran importancia, este documeno es enviado en cuanto se terminan las reuniones. \\
+	Estado de cuenta del Banco de M\'exico - semanal/mensual & Al igual que cualquier mortal, y cualquier instituci\'on bancaria, no existe ningun ente o instituci\'on que posea cuentas con fondos infinitos, y no es posible aparecer recursos m\'agicamente. Estos son los estados de cuenta que se reportan en distintos ciclos para las arcas de BANXICO. & BANXICO tiene siempre presente sus estados de cuenta, no requiere hacer papeleos. \\
+	Resultados de la subasta de valores gubernamentales & El gobierno, tanto federal como estatal y municipal, tiene distintos metodos para obtener fondos; una de ellas es subastar los bienes que ya no necesita o que ya no le hes rentable mantener. & Estos resultados son enviados directamente despu\'es de que las subastas son cerradas y pagadas. \\
+	
+\hline
+\end{longtable}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Bibliografia        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hrule
+\begin{thebibliography}{X}
+	
+	\bibitem{basica3} S/D. (2020). \emph{U3 \textbar{} Indicadores y dimensiones sustentables en la promoción de alternativas sustentables}. 14 de agosto de 2020, de UnADM Sitio web: \\\url{https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BDSU/unidad_03/descargables/BDSU_U3_Contenido.pdf}
+	\bibitem{basica2} S/D. (2020). \emph{U2 \textbar{} Dimensiones y retos de la sustentabilidad}. 14 de agosto de 2020, de UnADM Sitio web: \\\url{https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BDSU/unidad_02/descargables/BDSU_U2_Contenido.pdf}
+	\bibitem{basica1} S/D. (2020). \emph{U1 \textbar{} Fundamentos al desarrollo sustentable}. 14 de agosto de 2020, de UnADM Sitio web: \\\url{https://dmd.unadmexico.mx/contenidos/DCSBA/BLOQUE1/BI/01/BDSU/unidad_01/descargables/BDSU_U1_Contenido.pdf}
+	
+	\bibitem{ine} Heath, J.. (2020) \emph{Lo que indican los indicadores. C\'omo utilizar la informaci\'on estadistica para entender la realidad econ\'omica}. 15 de Agosto de 2020, de INEGI. Sitio web: \url{http://internet.contenidos.inegi.org.mx/contenidos/Productos/prod_serv/contenidos/espanol/bvinegi/productos/estudios/indican_indi/indica_v25iv12.pdf}
+	
+\end{thebibliography}
+
+\end{document}

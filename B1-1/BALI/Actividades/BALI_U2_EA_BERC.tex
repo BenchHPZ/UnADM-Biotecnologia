@@ -71,6 +71,8 @@
 	\end{enumerate}
 	
 	durante el ejercicio usaremos $M_n$ para referirnos a la fila $n$ de la matriz $M$.
+	
+	\par Adem\'as de lo anterior, se debe notar que en los ejercicios falta la constante $x$ en la primera columna de los ejercicios 2 y 3.
 
 \begin{multicols}{2}
 	\begin{enumerate}[\bf{Sistema} 1]
@@ -144,39 +146,49 @@
 				3 +  7y + 2z = 4
 			\end{matrix}$
 
-			\par Priemro pasamos la matriz a su forma normal, de esto queda
+			\par Priemro colocamos las $x$ faltantes, de donde obtenemos que 
 			$$\begin{matrix}
-				1x + 12y + 3z = 19 \\
-				0x +  5y + 6z = 20 \\
-				0x +  7y + 2z = 1
+				 x + 12y + 3z = 19 \\
+				x4 +  5y + 6z = 24 \\
+				3x +  7y + 2z = 4
 			\end{matrix}$$
 			
 			y su matriz extendida es			
 			$$\left(\begin{array}{rrrr}
-				1 & 12 & 3 & 19 \\
-				0 & 5 & 6 & 20 \\
-				0 & 7 & 2 & 1
+				1.0 & 12.0 & 3.0 & 19.0 \\
+				4.0 & 5.0 & 6.0 & 24.0 \\
+				3.0 & 7.0 & 2.0 & 4.0
 			\end{array}\right)$$
 			
-			despues de normalizar proceder\'iamos a modificar la primer columna, pero en este caso ya esta lista, por lo que continuamos con la segunda columna. Primero $M_2 = M_2/5$ para obtener la unidad y luego con $M_1 = M_1 - 12 M_2$ y $M_3 = M_3 - 7 M_2$ limpiaremos para quedarnos con los ceros, de esto queda que 
+			en este ejercicio utilizaremos decimales. Despues de normalizar proceder\'iamos a modificar la primer columna
+			
 			$$\left(\begin{array}{rrrr}
-				1 & 0 & -\frac{57}{5} & -29 \\
-				0 & 1 & \frac{6}{5} & 4 \\
-				0 & 0 & -\frac{32}{5} & -27
+				1.0 & 12.0 & 3.0 & 19.0 \\
+				0.0 & -43.0 & -6.0 & -52.0 \\
+				0.0 & -29.0 & -7.0 & -53.0
 			\end{array}\right)$$
 			
-			para la ultima columna empezamos por $M_3 = M_3/(-32/5)$ y luego solo restamos este multiplicado por las veces del coeficiente restante, para que al final nos quede
+			continuamos con la segunda columna. Primero $M_2 = M_2/(-43.0)$ para obtener la unidad, de esto queda que 
+			
 			$$\left(\begin{array}{rrrr}
-				1 & 0 & 0 & \frac{611}{32} \\
-				0 & 1 & 0 & -\frac{17}{16} \\
-				0 & 0 & 1 & \frac{135}{32}
+				1.0 & 0.0 & 1.325 & 4.488 \\
+				-0.0 & 1.0 & 0.139 & 1.209 \\
+				0.0 & 0.0 & -2.953 & -17.930
+			\end{array}\right)$$
+			
+			
+			para la ultima columna empezamos por $M_3 = M_3/(-2.953)$ y luego solo restamos este multiplicado por las veces del coeficiente restante, para que al final nos quede
+			$$\left(\begin{array}{rrrr}
+				1.0 & 0.0 & 0.0 & -3.559 \\
+				0.0 & 1.0 & 0.0 & 0.362 \\
+				-0.0 & -0.0 & 1.0 & 6.070
 			\end{array}\right)$$
 			
 			de esto podemos obtener los valores de la ecuaci\'on, los cuales son
 			\begin{eqnarray*}
-				x &=& \frac{611}{32} \\
-				y &=&-\frac{ 17}{16} \\
-				z &=& \frac{135}{32}
+				x &=& -3.559 \\
+				y &=&  0.362 \\
+				z &=&  6.070
 			\end{eqnarray*}	
 
 		\item
@@ -188,37 +200,44 @@
 			
 			\par Primero normalizamos el sistema, de manera que quede		
 			$$\begin{matrix}
-				1x - 2y + 4z =  7 \\
-				0x + 2y - 8z =  6 \\
-				0x + 5y + 7z = 21
+				 x - 2y + 4z =  7 \\
+				4x + 2y - 8z = 10 \\
+				2x + 5y + 7z = 23
 			\end{matrix}$$
 			
 			de este sistema obtenemos la siguiente matriz extendida
 			$$\left(\begin{array}{rrrr}
-				1 & -2 & 4 & 7 \\
-				0 & 2 & -8 & 6 \\
-				0 & 5 & 7 & 21
-			\end{array}\right)$$
+					1.0 & 2.0 & 4.0 & 7.0 \\
+					4.0 & 2.0 & 8.0 & 10.0 \\
+					2.0 & 5.0 & 7.0 & 23.0
+				\end{array}\right)$$
 
-			de manera similar al ejercicio anterior, la matriz ya tiene la primer columna lista, por lo que pasamos directamente a trabajar sobre la segunda columna. Comenzamos con $M_2 = M_2/2$ para obtener la unidad y luego con $M_1 = M_1 + 2 M_2$ y $M_3 = M_3 - 5 M_2$ dejaremos la segunda columna tambien lista, de esto queda que
+			de manera similar al ejercicio anterior, comenzamos por la primer columna, por lo que pasamos directamente a trabajar sobre la segunda columna. 
 			$$\left(\begin{array}{rrrr}
-				1 & 0 & -4 & 13 \\
-				0 & 1 & -4 & 3 \\
-				0 & 0 & 27 & 6
+				1.0 & 2.0 & 4.0 & 7.0 \\
+				0.0 & -6.0 & -8.0 & -18.0 \\
+				0.0 & 1.0 & -1.0 & 9.0
+			\end{array}\right)$$ 
+			
+			continuamos con $M_2 = M_2/-6$ para obtener la unidad, de esto queda que
+			$$\left(\begin{array}{rrrr}
+				1.0 & 0.0 & 1.333 & 1.0 \\
+				0.0 & 1.0 & 1.333 & 3.0 \\
+				0.0 & 0.0 & -2.333 & 6.0
 			\end{array}\right)$$ 
 			
 			y seguimos el mismo procedimiento con la ultima columna, donde $M_3 = M_3/27$ y se resta la ultima con las otras multiplicada por el coeficiente a eliminar, de donde resulta que
 			$$\left(\begin{array}{rrrr}
-				1 & 0 & 0 & \frac{125}{9} \\
-				0 & 1 & 0 & \frac{35}{9} \\
-				0 & 0 & 1 & \frac{2}{9}
+				1.0 & 0.0 & 0.0 & 4.428 \\
+				0.0 & 1.0 & 0.0 & 6.428 \\
+				0.0 & 0.0 & 1.0 & -2.571
 			\end{array}\right)$$ 
 			
 			al final podemos obtener los siguientes resultados
 			\begin{eqnarray*}
-				x &=& \frac{125}{9} \\
-				y &=& \frac{ 35}{9} \\
-				z &=& \frac{  2}{9}
+				x &=& 4.428 \\
+				y &=& 6.625 \\
+				z &=& -2.57
 			\end{eqnarray*}	
 
 	\end{enumerate}
@@ -231,14 +250,8 @@
 	\par Para corroborar los resutlados se uso el \textit{CAS} 
 \footnote{Sistema Algebraico Computacional, por sus siglas en ingles} 
 	\href{https://www.sagemath.org/}{SageMath}, que utiliza como interfaz el lenguaje de programaci\'on \href{https://www.python.org/}{Python} y la \textit{UI} jupyter. El archivo html resultante del notebook generado se puede consultar \href{https://github.com/BenchHPZ/UnADM-Biotecnologia/blob/master/B1-1/BALI/Actividades/BALI_U2_EA_BERC.ipynb}{aqu\'i}.
-	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.32\textwidth]{BALI-U2-EA-1.png}
-		\includegraphics[width=0.32\textwidth]{BALI-U2-EA-2.png}
-		\includegraphics[width=0.32\textwidth]{BALI-U2-EA-3.png}
-		\caption{Comprobaci\'on de ejercicio 1, 2 y 3}
-	\end{figure}
+	\ \\ \ \\
+	\par \huge {\bf Nota:} \normalsize Las correciones de la fala de $x's$ en el ejercicio estan en la secci\'on \textbf{Trans} ya que los otros ejercicios no estan mal resueltos.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
