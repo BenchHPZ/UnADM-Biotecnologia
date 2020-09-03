@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %%
+%%        Datos Trabajo     %%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[0]{Asignacion a Cargo del Docente}
+\newcommand{\materia}[0]{Algebra Lineal}
+\newcommand{\grupo}[0]{GrupBI-BALI-2002-B1-012o}
+\newcommand{\unidad}[0]{Final}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{soul}
+
+\usepackage{graphicx}
+	\graphicspath{ {assets/} }
+
+\usepackage{hyperref}
+	\hypersetup{
+			pdftex,
+		        pdfauthor={bench},
+		        pdftitle={\titulo},
+		        pdfsubject={\materia},
+		        pdfkeywords={\grupo, \unidad, UnADM},
+		        pdfproducer={Latex with hyperref, Ubuntu},
+		        pdfcreator={pdflatex, or other tool},
+			colorlinks=true,
+				linkcolor=red,
+				urlcolor=cyan,
+				filecolor=yellow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+	\includegraphics{../../../assets/logo-unadm} \\
+	\ \\ Benjam\'in Rivera \\
+	\bf{\titulo}\\\ \\}
+
+\author{
+	Universidad Abierta y a Distancia de México \\
+	TSU en Biotecnolog\'ia \\
+	\textit{Materia:} \materia \\
+	\textit{Grupo:} \grupo \\
+	\textit{Unidad:} \unidad \\
+	\\
+	\textit{Matricula:} ES202105994 }
+
+\date{\textit{Fecha de entrega:} \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Documento         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle\newpage
+
+\section*{Ejercicio 1}
+	\par Pbten el determinante de la matriz $A$ por el \textit{m\'etodo de Cramer}
+		$$A = \begin{pmatrix}
+		    3 & 2 & 1 \\
+		    4 &-2 & 2 \\
+		    2 & 3 & 1
+		\end{pmatrix}$$
+    
+    \paragraph{Soluci\'on} Primero elaboramos la matriz extendida correspondiente
+		$$\left(\begin{array}{rrr}
+			3 & 2 & 1 \\
+			4 & -2 & 2 \\
+			2 & 3 & 1 \\
+			3 & 2 & 1 \\
+			4 & -2 & 2
+		\end{array}\right)$$
+	de esta obtenemos las operaciones correspondientes, que son
+		$$(3)(-2)(1) + (4)(3)(1) + (2)(2)(2)-((2)(-2)(1) + (3)(3)(2) + (4)(2)(1))$$
+	y con esto obtenemos que el \textbf{determinante de la matriz $A$} es $\det = -8$
+
+
+
+\section*{Ejercicio 2}
+	\par Suma las siguientes matrices
+		$$ A = \begin{pmatrix} 
+		    3 & 4 & 1 \\ 5 & 3 & 1 \\ 2 & 3 & 1 
+		    \end{pmatrix}, 
+		B = \begin{pmatrix}
+		    -2 & -3 & -1 \\ 4 & 3 & 2 \\ 10 & 4 & 2
+		    \end{pmatrix} $$
+		    
+	\paragraph{Soluci\'on} Dado que las matrices son de las mismas dimensiones, sabemos que la operaci\'on suma esta definida correctamente y se realiza \textit{elemento a elemento}. De manera que
+	\begin{eqnarray*}
+		A + B &=& \begin{pmatrix} 
+		    	3 & 4 & 1 \\ 5 & 3 & 1 \\ 2 & 3 & 1 
+		    \end{pmatrix} +
+		    \begin{pmatrix}
+		   		-2 & -3 & -1 \\ 4 & 3 & 2 \\ 10 & 4 & 2
+		    \end{pmatrix} \\
+		    &=& \left(\begin{array}{rrr}
+				1 & 1 & 0 \\
+				9 & 6 & 3 \\
+				12 & 7 & 3
+			\end{array}\right)
+	\end{eqnarray*}
+
+
+\section*{Ejercicio 3}
+	\par Resolver el siguiente sistema de ecuaciones mediante el \textbf{m\'etodo de Gauss}
+
+    \begin{eqnarray*}
+        3x + 2y + 2z &=& 10 \\
+        2x + 3y +  z &=&  8 \\
+        3x +  y + 5z &=& 11
+    \end{eqnarray*}
+    
+    \paragraph{Soluci\'on} Primero debemos pasar el sistema de ecuaciones a formato matricial. Este queda
+    $$\left(\begin{array}{rrrr}
+		3 & 2 & 2 & 10 \\
+		0 & \frac{5}{3} & -\frac{1}{3} & \frac{4}{3} \\
+		0 & 0 & \frac{14}{5} & \frac{9}{5}
+	\end{array}\right)$$
+	Luego tenemos que modificar la matriz para obtener una \textit{matriz triangular invertida}, para esto hacemos que la fila 2 sea -2/3 veces la fila 1 mas la fila 2 y que la fila 3 sea -1 veces la fila 1 mas la fila 3
+	$$\left(\begin{array}{rrrr}
+		3 & 2 & 2 & 10 \\
+		0 & \frac{5}{3} & -\frac{1}{3} & \frac{4}{3} \\
+		0 & -1 & 3 & 1
+	\end{array}\right)$$
+	Despu\'es  hacemos que la fila 3 sea 3/5 veces la fila 2 mas la fila 3
+	$$\left(\begin{array}{rrrr}
+		3 & 2 & 2 & 10 \\
+		0 & \frac{5}{3} & -\frac{1}{3} & \frac{4}{3} \\
+		0 & 0 & \frac{14}{5} & \frac{9}{5}
+	\end{array}\right)$$
+	Y ya tenemos la matriz en la forma deseada. Con esta ya podemos ver que las soluciones para este sistema son
+	$$ x = \frac{16}{7}, \quad y = \frac{13}{14}, \quad z = \frac{9}{14}$$
+
+
+\section*{Pruebas}
+	\par Todos los ejercicios fueron corroborados en \cite{github}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Bibliografia        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{thebibliography}{X}
+	\bibitem{github} BenchHPZ. (2020, 3 septiembre). \textit{BALI\_Z\_BERC}. GitHub. \url{https://github.com/BenchHPZ/UnADM-Biotecnologia/blob/master/B1-1/BALI/Actividades/BALI_Z_BERC.ipynb}
+\end{thebibliography}
+
+\end{document}

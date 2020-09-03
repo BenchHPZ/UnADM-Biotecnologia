@@ -9,18 +9,17 @@ Repositorio para material, tareas y proyectos que fueron creados, descargados y 
 La licenciatura esta dividida por bloques, a continuación se muestra la estructura de los bloques cursados hasta el momento
  	
  - [ ] Semestre 1 - _Jul-Dic 2020_
- 	- [Bloque 1](./B1-1/)
- 		- Contexto socioeconómico de México
- 		- Desarrollo Sustentable
- 		- Álgebra Líneal
+ 	- Bloque 1
+ 		- [Contexto socioeconómico de México](./B1-1/BCSM)
+ 		- [Desarrollo Sustentable](./B1-1/BDSU)
+ 		- [Álgebra Líneal](./B1-1/BALI)
  	
 
-> Los bloques con palomita ya fueron concluidas
 ## Desarrollo
 
 ### Licencia
 
-Todo el material de este repositorio, en actividades realcionadas con la _UnADM_, debe de tratarse sigueindo los lineamientos establecidos por el [código de ética](https://www.unadmexico.mx/images/descargables/codigo_de_etica_de_estudiantes_de_la_unadm.pdf) de la institución. Para cualquier otro proposito, todo el material de _mi autoria_ queda bajo la licencia [![WTFPL][logoWTFPL]][licenciaWTFPL]
+Todo el material de este repositorio, en actividades realcionadas con la _UnADM_, debe de tratarse sigueindo los lineamientos establecidos por el [código de ética](https://www.unadmexico.mx/images/descargables/codigo_de_etica_de_estudiantes_de_la_unadm.pdf) de la institución. Para cualquier otro proposito, todo el material de _mi autoria_ queda bajo la siguiente [licencia](./LICENSE)
 
 
 ### Autor
