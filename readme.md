@@ -13,6 +13,10 @@ La licenciatura esta dividida por bloques, a continuación se muestra la estruct
  		- [Contexto socioeconómico de México](./B1-1/BCSM)
  		- [Desarrollo Sustentable](./B1-1/BDSU)
  		- [Álgebra Líneal](./B1-1/BALI)
+ 	- Bloque 2
+ 		- [Desarrollo humano](./B2-1/BDHU)
+ 		- [Estadística básica](./B2-1/BEBA)
+ 		- [Fundamentos de investigación](./B2-1/BFIN)
  	
 
 ## Desarrollo
