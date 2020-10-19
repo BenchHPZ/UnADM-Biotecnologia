@@ -13,6 +13,7 @@
 
 ### Resumen de actividad
 
+<<<<<<< HEAD
 Para los interesados, trabajo completo esta en la primera referencia.
 
 #### Planteamiento
@@ -21,10 +22,16 @@ La biotecnología es una ciencia _relativamente_ nueva, sin embargo por su natur
 
 El planteamiento principal es _¿Cómo afecta la difusión científica en la percepción pública de
 la Biotecnología con la población del estado de Guanajuato?_. Enfocado a crear un repertorio de experimentos para que se puedan explicar conceptos de biotecnologos a todas las personas.
+=======
+#### Investigación
+
+aqui va algo
+>>>>>>> 9c5da069cc733dad1d900f3ed1f9fb4809dbf352
 
 
 #### Objetivos
 
+<<<<<<< HEAD
 El objetivo principal de este proyecto es
 
 > El desarrollo de experimentos, no peligrosos, para la difusión denla Biotecnología y la medición de su impacto en la sociedad.
@@ -47,12 +54,21 @@ población del estado de Guanajuato.
 La divulgación es, hoy en día, usada para que la gente conozca cosas, y como el miedo que se tiene por la biotecnología es principalmente por miedo [Mandianes, 2009](#referencias), entonces es candidata perfecta para tratar de hacer una campaña de difusión de lo que hace un biotecnólogo.
 
 La insistencia de usar objetos bioluminiscentes es por experiencia. Yo ya he trabajado con proyectos de divulgación, y la mayoría de los niños quedan encantados cuando las cosas brillan, cambian de color o explotan. Y aunque los niños no son las principales personas a las que queremos convencer, ellos traen a los mayores y te dan la oportunidad de que ellos también aprecien el experimento.
+=======
+aqui va algo
+
+
+### Justificacion
+
+aqui va algo
+>>>>>>> 9c5da069cc733dad1d900f3ed1f9fb4809dbf352
 
 
 
 ## Referencias
 
 bench. (2020, 9 octubre). _BFIN\_U2\_EA\_BERC._ GitHub. <https://github.com/BenchHPZ/UnADM-Biotecnologia/blob/master/B2-1/BFIN/Actividades/BFIN_U2_EA_BERC.pdf>
+<<<<<<< HEAD
 
 [Gordillo et al, 2003] Gordillo, M. M., & Osorio, C. (2003). Educar para participar en ciencia y tecnologı́a. Un proyecto para la difusión de la cultura cientı́fica. Revista Iberoamericana de Educación, 32(1), 8.
 
@@ -60,3 +76,5 @@ bench. (2020, 9 octubre). _BFIN\_U2\_EA\_BERC._ GitHub. <https://github.com/Benc
 a la comida. In Humanismo para el siglo XXI: Propuestas para el Congreso
 Internacional”Humanismo para el siglo XXI” (Vol. 31, p. 227). Universidad de
 Deusto.
+=======
+>>>>>>> 9c5da069cc733dad1d900f3ed1f9fb4809dbf352
