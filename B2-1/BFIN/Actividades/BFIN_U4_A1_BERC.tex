@@ -1,0 +1,137 @@
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+
+\usetheme{Berlin}
+\usecolortheme{seahorse}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   %%
+%%        Datos Trabajo     %%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titulo}[0]{Actividad 1. “Diseños de la investigación”}
+\newcommand{\materia}[0]{Fundamentos de Investigación}
+\newcommand{\grupo}[0]{BI-BFIN-2002-B2-013}
+\newcommand{\unidad}[0]{Unidad 4}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{soul}
+
+\usepackage{graphicx}
+	\graphicspath{ {assets/} }
+
+\usepackage{hyperref}
+	\hypersetup{
+			pdftex,
+		        pdfauthor={bench},
+		        pdftitle={\titulo},
+		        pdfsubject={\materia},
+		        pdfkeywords={\grupo, \unidad, UnADM},
+		        pdfproducer={Latex with hyperref, Ubuntu},
+		        pdfcreator={pdflatex, or other tool},
+			colorlinks=true,
+				linkcolor=[rgb]{0,0,0.45},
+				urlcolor=cyan,
+				filecolor=green,
+				citecolor=blue}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Actividad 1]{
+	%\includegraphics[width=3cm]{../../../assets/logo-unadm} \\
+	\bf{\titulo}}
+
+\author{ Benjamín Rivera }
+\institute{Universidad Abierta y a Distancia de México \\
+	\tiny
+	TSU en Biotecnolog\'ia }
+\date{\textit{Fecha de entrega:} \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Documento         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	\begin{frame}
+		\maketitle\tiny
+		\textit{Materia:} \materia \\
+		\textit{Grupo:} \grupo \\
+		\textit{Unidad:} \unidad \\
+		\textit{Matricula:} ES202105994
+		
+	\end{frame}
+
+	\begin{frame}{Tabla de contenidos}
+		\tableofcontents
+	\end{frame}
+
+\section{\cite{inv 1}}
+	\begin{frame}{\cite{inv 1}}
+		\begin{description}
+			\item[Problema o tema.] Producción de biocombustibles
+			\item[Pregunta y supuestos.] Pruducción de bioenergéticos y su afectación en el suministro alimentos en México. Para esto se parte de que el SRM\footnote{Senado de la Repúplica Mexicana} ya promueve la producción de estos y que México es una de los grandes productres de productos agrícolas.
+		\end{description}
+	\end{frame}
+	\begin{frame}{\cite{inv 1}}
+		\begin{description}
+			\item[Alcance y metodología.] Mediante el análisis del mercado americano se tratara de encontrar similaridades con el mercado méxicano para tratar de entender el futuru y proponer acciones para encaminar a la producción de biocombustibles en el país.
+			\item[Instrumentos y fuentes.] Este artículo baso su trabajo en estudios de mercados externos y del estado del arte en nuestro país. Esto se puede notar en su bibliografía.
+		\end{description}
+	\end{frame}
+
+
+\section{\cite{inv 2}}
+	\begin{frame}{\cite{inv 2}}
+		\begin{description}
+			\item[Problema o tema.] Producción de fármacos asisitdo por computadora.
+			\item[Pregunta y supuestos.] En este trabajos e supone que la asistencia por parte de procedimientos computacionales durante el desarrollo de farmacos ayuda a que estos sean más efectivos y que reduce tanto los costos como los tiempos involucrados.
+		\end{description}
+	\end{frame}
+	\begin{frame}{\cite{inv 2}}
+		\begin{description}
+			\item[Alcance y metodología.] Este artículo trata de entender el actual estado dle arte del desarrollo de fámacos asistido por computadora. Para esto se busca en los resultados actuales en donde se estudia el exito de otros y se lleva paso a paso del desarrollo de un medicamenteo contra el cancer para mostrar el resultado.
+			\item[Instrumentos y fuentes.] Las principales fuentes que usa este artículo son experimentos y productos desarrollados por otros investigadores. Sobre estos se trata de verificar la eficacia de la asistencia por computadora.
+		\end{description}
+		
+	\end{frame}
+
+
+\section{\cite{inv 3}}
+	\begin{frame}{\cite{inv 3}}
+		\begin{description}
+			\item[Problema o tema.] Uso de hongos como fertilizantes.
+			\item[Pregunta y supuestos.] Este parte de que el uso de hongos como fertilizantes naturales es, al menos, tan efectivo como si usaran los fetilizantes \textit{clásicos}. Estos claramente con la ventaja de que son naturales.
+		\end{description}
+	\end{frame}
+	\begin{frame}{\cite{inv 3}}
+		\begin{description}
+			\item[Alcance y metodología.] Este artículo se centro en estudiar la relación entre el crecimiento de las semillas de papaya \textit{(Carica papaya L.)} en convivnencia con la cepa de Hongos Micorrízicos Arbusculares \textit{(HMA)}
+			\item[Instrumentos y fuentes.] Este trabajo uso principalmente, como fuente de su argumentación, el análisis de un experimento realizado por ellos mismos.
+		\end{description}
+		
+	\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Bibliografia        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\scriptsize
+\section{Referencias}
+\begin{frame}{Referencias}
+	\begin{thebibliography}{X}
+		\bibitem[González, 2008]{inv 1} González Merino, A. (2008). Biocombustibles, biotecnología y alimentos: Impactos sociales para México. Argumentos (México, D.F.), 21(57), 55–83.
+		\bibitem[Prada, 2016]{inv 2} Prada Gracia, D. (2016). Application of computational methods for anticancer drug discovery, design, and optimization. Boletín Médico Del Hospital Infantil de México, 73(6), 411–423. \url{https://doi.org/10.1016/j.bmhimx.2016.10.006}
+		\bibitem[Quiñones et al, 2012]{inv 3} Quiñones Aguilar, E. E., Hernández-Acosta, E., Rincón-Enríquez, G., \& Ferrera-Cerrato, R. (2012). Interacción de hongos micorrízicos arbusculares y fertilización fosfatada en papaya. Terra Latinoamericana, 30(2), 165–176.
+	\end{thebibliography}
+\end{frame}
+\end{document}
