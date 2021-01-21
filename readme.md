@@ -20,7 +20,9 @@ La licenciatura esta dividida por bloques, a continuación se muestra la estruct
  		
  - [ ] Semestre 2 - _Ene-Jun 2021_ 
  	- Bloque 1
- 		- ...
+ 		- [Biología celular](./B1-2/BBIC)
+ 		- [Química](./B1-2/BQUI)
+ 		- [Física](./B1-2/BFIS)
 
 ## Desarrollo
 
